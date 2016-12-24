@@ -8,6 +8,7 @@
 
   "dependencies": {
     "dotnet-test-xunit": "2.2.0-*",
+    "Microsoft.DotNet.InternalAbstractions": "1.0.0",
     "Pomelo.AspNetCore.WebPages": "1.1.0-*",
     "xunit": "2.2.0-beta4-*"
   },
