@@ -1,0 +1,20 @@
+﻿@route "/Student/Delete"
+@functions {
+    public int Id { get; set; }
+
+    public IActionResult OnGet() => NotFound();
+
+    [ValidateAntiForgeryToken]
+    public IActionResult OnPost()
+    {
+        var db = Database.Open();
+        if (db.Execute(@"DELETE FROM ""Students"" WHERE ""ID"" = {0}", Id) == 1)
+        {
+            return Content("The student has been removed successfully.");
+        }
+        else
+        {
+            return Content("Student not found.");
+        }
+    }
+}

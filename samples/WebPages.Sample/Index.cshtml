@@ -1,0 +1,58 @@
+﻿@route "/"
+@model List<dynamic>
+@{ 
+    ViewBag.Title = "Home";
+}
+@functions {
+    public IActionResult OnGet()
+    {
+        var db = Database.Open();
+        var data = db.Query(@"SELECT * FROM ""Students"" ORDER BY ""Score"" DESC").ToList();
+        return View(data);
+    }
+}
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Student No.</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var row in Model)
+            {
+                <tr>
+                    <td>@row.Id</td>
+                    <td>@row.Name</td>
+                    <td>@row.Score</td>
+                    <td>
+                        <a href="/Student/Edit/@row.Id">Edit</a>
+                        <a href="javascript:deleteStudent(@row.Id)">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>Average: @Model.Average(x => (int)x.Score)</p>
+}
+else
+{
+    <p>There were no records in your database.</p>
+}
+
+<form id="frmDelete" action="/Student/Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="Id" id="stuId" />
+</form>
+
+<script>
+    function deleteStudent(id)
+    {
+        $('#stuId').val(id);
+        $('#frmDelete').submit();
+    }
+</script>

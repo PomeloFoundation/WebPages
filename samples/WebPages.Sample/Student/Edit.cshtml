@@ -1,0 +1,51 @@
+﻿@route "/Student/Edit/{id}"
+@model dynamic
+@{ 
+    ViewBag.Title = "Edit Student ";
+}
+@functions {
+    public int Id { get; set; }
+
+    public string Name { get; set; }
+
+    public int Score { get; set; }
+
+    public IActionResult OnGet()
+    {
+        var db = Database.Open();
+        var data = db.QuerySingle(@"SELECT * FROM ""Students"" WHERE ""Id"" = {0}", Id);
+        if (data == null)
+            return NotFound();
+        return View(data);
+    }
+
+    [ValidateAntiForgeryToken]
+    public IActionResult OnPost()
+    {
+        var db = Database.Open();
+        if (db.Execute(@"UPDATE ""Students"" SET ""Name"" = {0}, ""Score"" = {1} WHERE ""ID"" = {2}", Name, Score, Id) == 1)
+        {
+            return Content("The student has been saved successfully.");
+        }
+        else
+        {
+            return Content("Student not found.");
+        }
+    }
+}
+
+<form method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="Name" class="form-control" value="@Model.Name" /></td>
+        </tr>
+        <tr>
+            <td>Score</td>
+            <td><input type="text" name="Score" class="form-control" value="@Model.Score" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Save" class="btn btn-primary" />
+</form>

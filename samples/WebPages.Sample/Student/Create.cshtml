@@ -1,0 +1,39 @@
+﻿@route "/Student/Create"
+@{ 
+    ViewBag.Title = "Create Student";
+}
+@functions {
+    public string Name { get; set; }
+
+    public int Score { get; set; }
+
+    public IActionResult OnGet()
+    {
+        return View();
+    }
+
+    [ValidateAntiForgeryToken]
+    public IActionResult OnPost()
+    {
+        var db = Database.Open();
+        if (db.Execute(@"INSERT INTO ""Students"" (""Name"", ""Score"") VALUES ({0}, {1})", Name, Score) == 1)
+            return Content($"The student has been created successfully, id: { db.GetLastInsertId() }");
+        else
+            return Content("The student has been created failed.");
+    }
+}
+
+<form method="post">
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="Name" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Score</td>
+            <td><input type="text" name="Score" class="form-control" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit" class="btn btn-primary" />
+</form>

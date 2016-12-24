@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{37CCA5C8-D7E2-4628-8301-ACC3CF4F17C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AF46F2C6-AA7B-444F-B60F-1F9B23D4DC57}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3F32D1AE-FAA9-4E6E-85FD-A7214D87D311}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages", "src\Pomelo.AspNetCore.WebPages\Pomelo.AspNetCore.WebPages.xproj", "{575B297C-0B6E-46E4-A5F9-EB313DDFC387}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.Data", "src\Pomelo.AspNetCore.WebPages.Data\Pomelo.AspNetCore.WebPages.Data.xproj", "{F04C0246-C252-4925-B6AA-427E29BB2EFE}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebPages.Sample", "samples\WebPages.Sample\WebPages.Sample.xproj", "{884C9FAD-B555-4E89-8458-B198B0B91924}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.Test", "test\Pomelo.AspNetCore.WebPages.Test\Pomelo.AspNetCore.WebPages.Test.xproj", "{EF102686-6002-40FB-97D9-9F95D9883A15}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.Data.MySql", "src\Pomelo.AspNetCore.WebPages.Data.MySql\Pomelo.AspNetCore.WebPages.Data.MySql.xproj", "{C8B913A3-CBAC-4B32-B203-E261FE47FBE6}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.Data.Npgsql", "src\Pomelo.AspNetCore.WebPages.Data.Npgsql\Pomelo.AspNetCore.WebPages.Data.Npgsql.xproj", "{722484A8-3115-48C2-8766-ADF393B9C366}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.Data.Sqlite", "src\Pomelo.AspNetCore.WebPages.Data.Sqlite\Pomelo.AspNetCore.WebPages.Data.Sqlite.xproj", "{E755BF1E-162B-4332-AB32-555BDD75C748}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.Data.SqlServer", "src\Pomelo.AspNetCore.WebPages.Data.SqlServer\Pomelo.AspNetCore.WebPages.Data.SqlServer.xproj", "{EB82BE98-E731-4399-A354-EAA4D9F5E08E}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.Data.Oracle", "src\Pomelo.AspNetCore.WebPages.Data.Oracle\Pomelo.AspNetCore.WebPages.Data.Oracle.xproj", "{D19C375C-C4C0-479B-9EA8-93872E32003C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Pomelo.AspNetCore.WebPages.WebMail", "src\Pomelo.AspNetCore.WebPages.WebMail\Pomelo.AspNetCore.WebPages.WebMail.xproj", "{DA0D438C-888D-45DC-8FAA-1F79366C5383}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{575B297C-0B6E-46E4-A5F9-EB313DDFC387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575B297C-0B6E-46E4-A5F9-EB313DDFC387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575B297C-0B6E-46E4-A5F9-EB313DDFC387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575B297C-0B6E-46E4-A5F9-EB313DDFC387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04C0246-C252-4925-B6AA-427E29BB2EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04C0246-C252-4925-B6AA-427E29BB2EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04C0246-C252-4925-B6AA-427E29BB2EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04C0246-C252-4925-B6AA-427E29BB2EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884C9FAD-B555-4E89-8458-B198B0B91924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884C9FAD-B555-4E89-8458-B198B0B91924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884C9FAD-B555-4E89-8458-B198B0B91924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884C9FAD-B555-4E89-8458-B198B0B91924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF102686-6002-40FB-97D9-9F95D9883A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF102686-6002-40FB-97D9-9F95D9883A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF102686-6002-40FB-97D9-9F95D9883A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF102686-6002-40FB-97D9-9F95D9883A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B913A3-CBAC-4B32-B203-E261FE47FBE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B913A3-CBAC-4B32-B203-E261FE47FBE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B913A3-CBAC-4B32-B203-E261FE47FBE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B913A3-CBAC-4B32-B203-E261FE47FBE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{722484A8-3115-48C2-8766-ADF393B9C366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722484A8-3115-48C2-8766-ADF393B9C366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722484A8-3115-48C2-8766-ADF393B9C366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722484A8-3115-48C2-8766-ADF393B9C366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E755BF1E-162B-4332-AB32-555BDD75C748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E755BF1E-162B-4332-AB32-555BDD75C748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E755BF1E-162B-4332-AB32-555BDD75C748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E755BF1E-162B-4332-AB32-555BDD75C748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB82BE98-E731-4399-A354-EAA4D9F5E08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB82BE98-E731-4399-A354-EAA4D9F5E08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB82BE98-E731-4399-A354-EAA4D9F5E08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB82BE98-E731-4399-A354-EAA4D9F5E08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19C375C-C4C0-479B-9EA8-93872E32003C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19C375C-C4C0-479B-9EA8-93872E32003C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19C375C-C4C0-479B-9EA8-93872E32003C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19C375C-C4C0-479B-9EA8-93872E32003C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA0D438C-888D-45DC-8FAA-1F79366C5383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA0D438C-888D-45DC-8FAA-1F79366C5383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA0D438C-888D-45DC-8FAA-1F79366C5383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA0D438C-888D-45DC-8FAA-1F79366C5383}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{575B297C-0B6E-46E4-A5F9-EB313DDFC387} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+		{F04C0246-C252-4925-B6AA-427E29BB2EFE} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+		{884C9FAD-B555-4E89-8458-B198B0B91924} = {37CCA5C8-D7E2-4628-8301-ACC3CF4F17C3}
+		{EF102686-6002-40FB-97D9-9F95D9883A15} = {3F32D1AE-FAA9-4E6E-85FD-A7214D87D311}
+		{C8B913A3-CBAC-4B32-B203-E261FE47FBE6} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+		{722484A8-3115-48C2-8766-ADF393B9C366} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+		{E755BF1E-162B-4332-AB32-555BDD75C748} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+		{EB82BE98-E731-4399-A354-EAA4D9F5E08E} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+		{D19C375C-C4C0-479B-9EA8-93872E32003C} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+		{DA0D438C-888D-45DC-8FAA-1F79366C5383} = {53F409E0-79B3-4A31-8FF2-91AA2ACF2A8F}
+	EndGlobalSection
+EndGlobal
