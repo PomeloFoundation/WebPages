@@ -17,8 +17,7 @@ namespace WebPages.Sample
         {
             loggerFactory.AddConsole(LogLevel.Debug);
             app.UseDeveloperExceptionPage();
-            
-            app.UseMvcWithDefaultRoute();
+            app.UseWebPages();
             app.UseStaticFiles();
         }
     }
