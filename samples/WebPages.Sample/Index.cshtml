@@ -1,11 +1,9 @@
 ﻿@route "/"
 @model List<dynamic>
-@{ 
-    ViewBag.Title = "Home";
-}
 @functions {
     public IActionResult OnGet()
     {
+        ViewBag.Title = "Home";
         var db = Database.Open();
         var data = db.Query(@"SELECT * FROM ""Students"" ORDER BY ""Score"" DESC").ToList();
         return View(data);

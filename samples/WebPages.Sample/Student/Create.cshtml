@@ -1,7 +1,4 @@
 ﻿@route "/Student/Create"
-@{ 
-    ViewBag.Title = "Create Student";
-}
 @functions {
     public string Name { get; set; }
 
@@ -9,6 +6,7 @@
 
     public IActionResult OnGet()
     {
+        ViewBag.Title = "Create Student";
         return View();
     }
 

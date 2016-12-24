@@ -1,8 +1,5 @@
 ﻿@route "/Student/Edit/{id}"
 @model dynamic
-@{ 
-    ViewBag.Title = "Edit Student ";
-}
 @functions {
     public int Id { get; set; }
 
@@ -12,6 +9,7 @@
 
     public IActionResult OnGet()
     {
+        ViewBag.Title = "Edit Student ";
         var db = Database.Open();
         var data = db.QuerySingle(@"SELECT * FROM ""Students"" WHERE ""Id"" = {0}", Id);
         if (data == null)
